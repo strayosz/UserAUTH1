@@ -16,20 +16,20 @@ public class Main {
         while (flag) {
             try {
                 sc = new Scanner(System.in);
-                System.out.println("Логин");
+                System.out.println("Введите Логин");
                 String login = sc.nextLine();
                 if (login.equals("exit")) {
                     break;
                 }
-                System.out.println("Пароль");
+                System.out.println("Введите Пароль");
                 String password = sc.nextLine();
 
                 if (checkUser(login, password, users) == ADMIN) {
-                    System.out.println("Админ");
+                    System.out.println("Меню Админа");
                     flag = false;
                 }
                 if (checkUser(login, password, users) == USER) {
-                    System.out.println("Пользователь");
+                    System.out.println("Меню Пользователя");
                     flag = false;
                 }
             } catch (WrongLogin s) {
